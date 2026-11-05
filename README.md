@@ -4,9 +4,15 @@ Homebrew Cask distribution for [ONIWA](https://github.com/hiro259/oniwa), a free
 
 ## Install
 
+For Homebrew versions that require explicit trust of third-party taps, register the tap and trust **only the ONIWA cask** before installing:
+
 ```sh
+brew tap hiro259/tap
+brew trust --cask hiro259/tap/oniwa
 brew install --cask hiro259/tap/oniwa
 ```
+
+`brew trust` authorizes Homebrew to load the selected third-party cask definition. Only do this if you trust the publisher and have reviewed the [cask definition](Casks/oniwa.rb). The trust step is required on some current Homebrew setups; it does not bypass macOS Gatekeeper or Apple notarization.
 
 Homebrew fetches the official Apple-notarized DMG from [ONIWA GitHub Releases](https://github.com/hiro259/oniwa/releases/latest), checks its SHA-256 checksum, and installs `ONIWA.app` into Applications.
 
