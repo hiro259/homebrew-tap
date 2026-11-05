@@ -1,6 +1,6 @@
 cask "oniwa" do
-  version "0.1.1"
-  sha256 "4a89d91fa7b4bddffe7746781c3a30dc20f458bc34fb55c40026b738070bd660"
+  version "0.1.2"
+  sha256 "33bd9e8dff46d77301339ce5650b9e108bcdb193c8e1f6bd3d179b288e93f497"
 
   url "https://github.com/hiro259/oniwa/releases/download/v#{version}/ONIWA-v#{version}-macos.dmg"
   name "ONIWA"
