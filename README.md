@@ -14,7 +14,7 @@ For this fully qualified install, current Homebrew automatically adds the tap an
 
 Homebrew fetches the official Apple-notarized DMG from [ONIWA GitHub Releases](https://github.com/hiro259/oniwa/releases/latest), checks its SHA-256 checksum, and installs `ONIWA.app` into Applications.
 
-**Requirements:** Apple Silicon Mac and macOS 13 (Ventura) or later for the current v0.1.1 release. ONIWA uses macOS Accessibility permission and the Mission Control `Control+Left/Right` Space-switching shortcuts.
+**Requirements:** Apple Silicon Mac and macOS 13 (Ventura) or later for the current v0.1.2 release. ONIWA uses macOS Accessibility permission and the Mission Control `Control+Left/Right` Space-switching shortcuts.
 
 After installation, start ONIWA from Applications and follow its Accessibility setup guide. Open the search palette with `Option+Space` (default shortcut).
 
@@ -24,10 +24,16 @@ If you already installed ONIWA by dragging it from a DMG, **quit ONIWA first**. 
 
 ## Update
 
+Quit ONIWA from the menu bar before upgrading. For users already running a Homebrew-managed v0.1.1 installation:
+
 ```sh
 brew update
 brew upgrade --cask hiro259/tap/oniwa
 ```
+
+After upgrading, open `/Applications/ONIWA.app` and verify the existing Space names/tags, app icons and single-/two-display switching. macOS may ask you to authorize Accessibility again. User preferences are not automatically deleted during normal upgrades.
+
+If the upgrade has not yet been tested on your Mac, keep a backup of important settings and follow the [release notes](https://github.com/hiro259/oniwa/releases/tag/v0.1.2).
 
 To uninstall the app (without automatically removing your user data):
 
